@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Requester</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="requester">
+
+    <ion-card>
+
+        <ion-card-content>
+            <img src="{{requester.picture}}"/>
+            <h2>{{requester.name}}</h2>
+            <h3>{{requester.title}}</h3>
+        </ion-card-content>
+
+        <ion-list>
+            <a href="tel:{{requester.Phone__c}}" ion-item>
+                <ion-icon name="call" item-left></ion-icon>
+                <p>Call Office</p>
+                <h2>{{requester.phone}}</h2>
+            </a>
+            <a href="tel:{{requester.phone}}" ion-item>
+                <ion-icon name="call" item-left></ion-icon>
+                <p>Call Mobile</p>
+                <h2>{{requester.mobilePhone}}</h2>
+            </a>
+            <a href="tel:{{requester.phone}}" ion-item>
+                <ion-icon name="text" item-left></ion-icon>
+                <p>Text</p>
+                <h2>{{requester.mobilePhone}}</h2>
+            </a>
+            <a href="mailto:{{requester.email}}" ion-item>
+                <ion-icon name="mail" item-left></ion-icon>
+                <p>Email</p>
+                <h2>{{requester.email}}</h2>
+            </a>
+        </ion-list>
+
+    </ion-card>
+
+</ion-content>

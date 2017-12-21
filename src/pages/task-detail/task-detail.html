@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Task</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card *ngIf="task.id">
+        <img src="{{task.picture}}"/>
+        <ion-card-content>
+            <h2 class="card-title">{{task.title}}</h2>
+            <p>{{task.address}}, {{task.city}} {{task.state}}</p>
+        </ion-card-content>
+        <ion-list>
+
+            <ion-item>
+                <ion-icon item-left name="moon"></ion-icon>
+                <h3>Bedrooms</h3>
+                <ion-note item-right>{{task.bedrooms}}</ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left name="leaf"></ion-icon>
+                <h3>Bathrooms</h3>
+                <ion-note item-right>{{task.bathrooms}}</ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-icon item-left name="pricetag"></ion-icon>
+                <h3>Asking Price</h3>
+                <ion-note item-right>{{task.price}}</ion-note>
+            </ion-item>
+            <button ion-item (click)="openRequesterDetail(task.requester)">
+                <ion-avatar item-left>
+                    <img src="{{task.requester.picture}}"/>
+                </ion-avatar>
+                <h2>{{task.requester.name}}</h2>
+                <p>{{task.requester.title}}</p>
+            </button>
+        </ion-list>
+
+        <ion-item>
+            <button ion-button icon-left (click)="favorite(task)" clear item-left>
+                <ion-icon name="star"></ion-icon>
+                Favorite
+            </button>
+            <button ion-button icon-left (click)="share(task)" clear item-right>
+                <ion-icon name="share"></ion-icon>
+                Share
+            </button>
+        </ion-item>
+
+    </ion-card>
+</ion-content>
