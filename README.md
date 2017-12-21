@@ -1,6 +1,3 @@
-# Ionic DreamHouse
-
-Ionic DreamHouse is a sample application that demonstrates how to build mobile apps with Ionic 2. 
 
 ## Installation Instructions
 
@@ -36,7 +33,7 @@ Follow these instructions to install the app and run it with the mock (in-memory
 
 Follow these instructions to run it with the REST data services:
 
-1. Replace all references to `property-service-mock` and `broker-service-mock` with `property-service` and `broker-service`
+1. Replace all references to `task-service-mock` and `requester-service-mock` with `task-service` and `requester-service`
  
 1. Install the Node.js implementation of the REST services (see [this repository](https://github.com/AppTasker/app-prototype-helper) for instructions), and run the Node server.
  
